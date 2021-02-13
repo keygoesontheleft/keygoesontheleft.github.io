@@ -74,6 +74,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 0 1vw;
 }
 .promo {
@@ -107,6 +108,9 @@ a {
 }
 .teeSpring a {
     color: #af1e48;
+}
+.etsy a {
+    color: #f1651f;
 }
 a:hover {
     color: #ecd306;
