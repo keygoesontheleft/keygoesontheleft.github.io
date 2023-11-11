@@ -1,3 +1,21 @@
+:root {
+    --background-dark: #111111;
+    --background-medium: #191919;
+    --background-light: #f7f7f7;
+    --background-content: #ebebeb;
+    --pure-white: #ffffff;
+    --white: #f7f7f7;
+    --black: #191919;
+    --red: #b50216;
+    --red-hover: #a00114;
+    --footer-text:  #f7f7f7;
+    --copyright-text: #555555;
+    --disabled: #555555;
+}
+::selection {
+    color: var(--white);
+    background-color: var(--black);
+}
 html {
     background-image: url(kgotl-home-background.jpg);
     background-attachment: fixed;
@@ -12,7 +30,7 @@ body {
     font-size: 10px;
     line-height: 1.25;
     font-weight: 400;
-    color: #f7f7f7;
+    color: var(--white);
     height: 100%;
     margin: 0;
     padding: 0;
@@ -29,8 +47,7 @@ p {
     margin: 1vh 4vw;
 }
 img {
-    width: 100%;
-    max-width: fit-content;
+    max-width: 100%;
 }
 .kgotlPage {
     display: flex;
@@ -50,13 +67,46 @@ img {
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 0 4vw;
+    width: 100%;
+    padding: 0 10vw;
 }
-.kgotlContainer .kgotlShopNow {
-    padding: 4vh 0;
+.kgotlLogo {
+    max-height: 60%;
 }
-.kgotlContainer .kgotlShopNow a img:hover {
-    opacity: 80%;
+.kgotlLogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.kgotlShopNow {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh 0;
+}
+.kgotlContent {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    padding-bottom: 3vh;
+}
+.button {
+    display: none;
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 6px;
+    padding: 2vh 5vw;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    text-decoration: none;
+}
+.button:hover {
+    background-color: var(--red-hover);
+}
+.disabledForNow {
+    background-color: var(--disabled);
+    color: var(--black);
+    border-radius: 6px;
+    padding: 2vh 5vw;
+    font-size: clamp(1.5rem, 2vw, 2rem);
 }
 footer {
     display: flex;
@@ -68,6 +118,6 @@ footer {
     right: 0;
     height: 50px;
     padding: 0 4vw;
-    font-size: 1rem;
-    color: #454545;
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+    color: var(--copyright-text);
 }
